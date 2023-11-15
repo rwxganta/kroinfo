@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #181818;
+}
+
+#root {
+    /*height: 100%;*/
+    min-height: 100dvh;
+    background-color: lightgreen;
+
+    display: grid;
+    grid-template-columns: minmax(1.875rem, auto) 1fr minmax(1.875rem, auto);
+    grid-template-rows: 1rem auto 1rem;
+}
+
+main {
+    padding: .5rem;
+    background-color: lightcyan;
+    border-radius: .4rem;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+aside {
+    /*outline: 2px dotted slateblue;
+    outline-offset: -2px;*/
+    display: flex;
+    justify-content: center;
+
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.weekDays {
+    margin-top: .9rem;
+    list-style: none;
+    font-size: .8rem;
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    pointer-events: none;
+
+    display: flex;
+    gap: .4rem;
+}
+
+.weekDays li {
+    outline: 1px solid #181818;
+    padding-inline: .4em;
+    text-transform: uppercase;
+    background-color: lightcyan;
+    border-radius: 100vw;
+}
+
+.weekDays li.today {
+    color: lightcyan;
+    background-color: #181818;
+}
